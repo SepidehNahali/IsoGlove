@@ -102,7 +102,7 @@ for i in range(len(rw)):
           # print('after',rw[i],'xx: ',xx)
 
 savetxt("biogrid_randomwalks.csv", rw, delimiter=",") #for server
-rw = loadtxt("/content/drive/MyDrive/glove/biogrid_randomwalks.csv", delimiter=",")
+rw = loadtxt("biogrid_randomwalks.csv", delimiter=",")
 rwX = rw[:,:]
 from sklearn.manifold import Isomap
 rwX=np.array(rwX)
