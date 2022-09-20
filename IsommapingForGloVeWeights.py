@@ -6,15 +6,15 @@ from networkx.readwrite import json_graph
 from argparse import ArgumentParser
 import pandas as pd
 
-G = json_graph.node_link_graph(json.load(open("ppi-G.json")))
-labels = json.load(open("ppi-class_map.json"))
-labels = {int(i):l for i, l in labels.items()}
-train_ids = [n for n in G.nodes if not G.nodes[n]['val'] and not G.nodes[n]['test']]
-test_ids = [n for n in G.nodes if G.nodes[n]['test']]
-train_labels = np.array([labels[i] for i in train_ids])
-if train_labels.ndim == 1:
-    train_labels = np.expand_dims(train_labels, 1)
-test_labels = np.array([labels[i] for i in test_ids])
+# G = json_graph.node_link_graph(json.load(open("ppi-G.json")))
+# labels = json.load(open("ppi-class_map.json"))
+# labels = {int(i):l for i, l in labels.items()}
+# train_ids = [n for n in G.nodes if not G.nodes[n]['val'] and not G.nodes[n]['test']]
+# test_ids = [n for n in G.nodes if G.nodes[n]['test']]
+# train_labels = np.array([labels[i] for i in train_ids])
+# if train_labels.ndim == 1:
+#     train_labels = np.expand_dims(train_labels, 1)
+# test_labels = np.array([labels[i] for i in test_ids])
 
 edge_list = pd.read_csv("BioGrid_edgelist", sep = ' ', header = None)
 edge_list = edge_list.drop(2, axis=1)
