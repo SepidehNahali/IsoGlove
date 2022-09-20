@@ -5,6 +5,7 @@ import networkx as nx
 from networkx.readwrite import json_graph
 from argparse import ArgumentParser
 import pandas as pd
+from tqdm import tqdm
 
 # G = json_graph.node_link_graph(json.load(open("ppi-G.json")))
 # labels = json.load(open("ppi-class_map.json"))
