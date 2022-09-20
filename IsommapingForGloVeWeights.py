@@ -23,7 +23,7 @@ import pickle
 import torch
 import yaml
 from gensim.models.keyedvectors import KeyedVectors
-from glove import GloVe
+# from glove import GloVe
 import h5py
 try: import cPickle as pickle
 except: import pickle
